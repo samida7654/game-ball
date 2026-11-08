@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#101827"><title>Game Ball 3D — Multiplayer Fighting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hud"><div class="brand">GAME BALL <span>3D</span></div><div class="stats"><span id="hp">❤️ 100</span><span id="score">⭐ 0</span><span id="status">OFFLINE</span></div></div>
+  <main id="menu" class="panel">
+    <h1>GAME BALL <b>3D</b></h1><p>Multiplayer arena fighting</p>
+    <input id="playerName" maxlength="14" placeholder="Nama pemain" value="Fighter">
+    <input id="roomCode" maxlength="16" placeholder="Kod bilik (contoh: ARENA7)" value="ARENA7">
+    <div class="actions"><button id="hostBtn">BUAT BILIK</button><button id="joinBtn" class="alt">SERTAI BILIK</button></div>
+    <p class="hint">Buat bilik pada satu peranti. Masukkan kod sama pada peranti kedua.</p>
+    <button id="soloBtn" class="ghost">MAIN SOLO</button>
+    <div id="connection">Sedia untuk bertarung.</div>
+  </main>
+  <div id="help">WASD / Joystick: bergerak · Klik / ATTACK: serang · SPACE: lompat</div>
+  <div id="mobile">
+    <div id="stick"><div id="knob"></div></div>
+    <div class="mobile-actions"><button id="jumpBtn">JUMP</button><button id="attackBtn">ATTACK</button></div>
+  </div>
+  <div id="result" class="panel hidden"><h2 id="resultTitle">K.O.!</h2><p id="resultText"></p><button id="againBtn">MAIN LAGI</button></div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script src="scripts.js"></script>
+</body></html>
